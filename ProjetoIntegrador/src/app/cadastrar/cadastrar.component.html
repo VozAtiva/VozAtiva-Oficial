@@ -1,0 +1,54 @@
+<div class="container-fluid">
+
+  <!--<div class="row d-flex align-items-center">-->
+       <div class="col-md-12">
+ 
+ 
+        <iframe src='https://my.spline.design/untitled-ee3b9f4485619c7084ed6acca5f9d14d/' frameborder='0' width='1300px' height='1000px'></iframe>
+
+ </div>
+
+
+
+ <form>
+  <h3>Cadastre-se</h3>
+  <p> 
+  <label for="nome">Seu nome</label>
+  <input  [(ngModel)]='usuario.nome' id="nome_cad" name="nome_cad"  required="required" type="text" placeholder="" id="nome_cad">
+  </p> 
+
+  <p>
+  <label for="email">Seu Email</label>
+  <input  [(ngModel)]='usuario.usuario' id="email_cad" name="email_cad" required="required" type="email" placeholder="">
+</p>
+
+<p>
+  <label for="foto">Link da Foto</label>
+  <input  [(ngModel)]='usuario.foto' id="foto_cad" name="foto_cad" required="required" type="text" placeholder="">
+</p>
+
+<p>
+  <label for="senha">Sua senha</label>
+  <input (input)='confirmSenha($event)' id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Sua senha deve ter no mínimo 5 caracteres">
+</p>
+
+<p>
+  <label for="senha">Confirme sua senha</label>
+  <input  [(ngModel)]='usuario.senha' id="csenha_cad" name="csenha_cad" required="required" type="password" placeholder="Confirmar senha">
+</p>
+
+  <div>
+    <hr>
+    <p>
+    <button  (click)="cadastrarUsuario()" type="submit" class="btn btn-success">Cadastrar</button>
+  </p>
+  
+
+  <hr class="mt-2 mb-2">
+
+  <p class="text-center">
+      Já possui uma conta? <a href="" routerLink="/logar" >Retornar ao Login</a>
+  </p>
+</div>
+</form>
+</div>
